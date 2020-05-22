@@ -1,0 +1,2 @@
+The DLL 'rzledapp.dll' was compiled from the following project: https://github.com/DalexKraus/RzChromaLEDs.
+Build using CMake and the DLL "will" be compiled. Needs to be relative to the executable using it!
