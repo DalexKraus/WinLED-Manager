@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LED-Manager", "RzChromaLEDs\LED-Manager.csproj", "{F4037CB8-68E9-4020-8228-93B441EF2399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LED-Manager", "LED-Manager\LED-Manager.csproj", "{D819EB21-3E99-4E0E-917E-E66FDAC01C48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4037CB8-68E9-4020-8228-93B441EF2399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4037CB8-68E9-4020-8228-93B441EF2399}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4037CB8-68E9-4020-8228-93B441EF2399}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4037CB8-68E9-4020-8228-93B441EF2399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D819EB21-3E99-4E0E-917E-E66FDAC01C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D819EB21-3E99-4E0E-917E-E66FDAC01C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D819EB21-3E99-4E0E-917E-E66FDAC01C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D819EB21-3E99-4E0E-917E-E66FDAC01C48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

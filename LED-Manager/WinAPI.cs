@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RzChromaLEDs
 {
@@ -15,13 +11,27 @@ namespace RzChromaLEDs
         [DllImport("user32.dll")]
         public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
-        public static readonly int SW_HIDE = 0;
-        public static readonly int SW_SHOW = 5;
+        [DllImport("user32.dll")]
+        public static extern long GetWindowLong(IntPtr hWnd, int index);
+
+        [DllImport("user32.dll")]
+        public static extern long SetWindowLong(IntPtr hWnd, int index, long dwNewLong);
+
+        public static readonly int SW_HIDE  = 0;
+        public static readonly int SW_SHOW  = 5;
+        private const int WS_EX_APPWINDOW   = 0x40000;
+        private const int WS_EX_TOOLWINDOW  = 0x0080;
+        private const int GWL_EXSTYLE       = -0x14;
 
         public static void ShowConsoleWindow(bool showing)
         {
-            var handle = GetConsoleWindow();
-            ShowWindow(handle, showing ? SW_SHOW : SW_HIDE);
+            var windowHandle = GetConsoleWindow();
+
+            //Hides or shows the window
+            ShowWindow(windowHandle, showing ? SW_SHOW : SW_HIDE);
+
+            //Removes the application's icon from the taskbar
+            SetWindowLong(windowHandle, GWL_EXSTYLE, GetWindowLong(windowHandle, GWL_EXSTYLE) | WS_EX_TOOLWINDOW);
         }
     }
 }

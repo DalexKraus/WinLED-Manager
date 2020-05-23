@@ -18,7 +18,6 @@ namespace RzChromaLEDs
         public Program()
         {
             _client = new Client();
-
             List<(string, EventHandler)> trayMenuItems = new List<(string, EventHandler)>()
             {
                 (APP_NAME, null),
